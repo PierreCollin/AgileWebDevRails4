@@ -12,4 +12,8 @@ class Product < ActiveRecord::Base
 		minimum: 10,
 		too_short: "must be at least %{count} characters long" 
 	}
+
+	def self.lastest
+		Product.order(:updated_at).last
+	end
 end
