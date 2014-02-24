@@ -15,6 +15,9 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    assert_select '#columns #side a', minimum: 4
+    
+    assert_select 'h1', 'Listing products'
   end
 
   test "should get new" do
@@ -49,7 +52,8 @@ class ProductsControllerTest < ActionController::TestCase
     assert_difference('Product.count', -1) do
       delete :destroy, id: @product
     end
-
     assert_redirected_to products_path
   end
+
+
 end
