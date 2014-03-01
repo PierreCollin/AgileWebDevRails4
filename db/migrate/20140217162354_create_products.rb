@@ -8,5 +8,11 @@ class CreateProducts < ActiveRecord::Migration
 
       t.timestamps
     end
+    p = Product.new
+    p.title = 'my Title is long'
+    p.description = 'A description'
+    p.image_url = 'ruby.jpg'
+    p.price = 24.5
+    p.save!
   end
 end
