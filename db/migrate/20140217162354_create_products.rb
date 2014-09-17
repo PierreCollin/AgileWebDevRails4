@@ -8,6 +8,7 @@ class CreateProducts < ActiveRecord::Migration
 
       t.timestamps
     end
+    
     p = Product.new
     p.title = 'my Title is long'
     p.description = 'A description'

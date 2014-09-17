@@ -3,13 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.carts{
+.carts, #side #cart {
 	
-	.item_price{
+  table {
+    margin: auto 0 auto auto;
+  }
+
+	.item_price, .total_line {
 		text-align: right;
 	}
-	.total_cell{
+	.total_cell, total_line {
 		font-weight: bold;
 		border-top: 1px solid #595;
 	}
+  .empty_total_cell, total_line {
+    font-weight: bold;
+  }
+
 }
