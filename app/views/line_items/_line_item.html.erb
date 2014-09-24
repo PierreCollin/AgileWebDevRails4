@@ -6,9 +6,6 @@
   <td> <%= line_item.product.title %></td>
   <td> <%= line_item.quantity %>&times;</td>
   <td class="line_item_price">
-    <%= formatted_price(line_item.price) %>
+    <%= formatted_price line_item.price %>
   </td>
- <!--  <td>
-    <%= button_to 'Remove book from cart', line_item, method: :delete %>
-  </td> -->
 </tr>
