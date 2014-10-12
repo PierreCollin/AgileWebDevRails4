@@ -9,7 +9,7 @@ Product.delete_all
 
 Product.create!(
   title: 'CoffeeScript',
-  description: 
+  description:
     %{<p>
         CoffeeScript is JavaScript done right. It provides all of JavaScript's
 	functionality wrapped in a cleaner, more succinct syntax. In the first
@@ -17,7 +17,7 @@ Product.create!(
 	shows you how to hold onto all the power and flexibility of JavaScript
 	while writing clearer, cleaner, and safer code.
       </p>},
-  image_url:   'coffee.jpg',    
+  image_url:   'coffee.jpg',
   price: 36.00
 )
 
@@ -35,7 +35,7 @@ Product.create!(
 
 Product.create!(
   title: 'Rails Test Prescriptions',
-  description: 
+  description:
     %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
         Rails applications, covering Test-Driven Development from both a

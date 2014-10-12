@@ -15,6 +15,7 @@ class CartsController < ApplicationController
 
   # GET /carts/new
   def new
+    print 'cart new'
     @cart = Cart.new
   end
 
