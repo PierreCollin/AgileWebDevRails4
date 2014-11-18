@@ -19,9 +19,9 @@ class Product < ActiveRecord::Base
     less_than: 1000
   }
   validates :title, uniqueness: true
-  validates :title, length: { 
+  validates :title, length: {
     minimum: 10,
-    too_short: "must be at least %{count} characters long" 
+    too_short: "must be at least %{count} characters long"
   }
   validates :image_url, uniqueness: {value: true, message: "image url must be unique"}
   validates :image_url, allow_blank: true, format: {
@@ -31,10 +31,11 @@ class Product < ActiveRecord::Base
 
   # ActiveRecord associations
   has_many :line_items
+  has_many :orders, through: :line_items
 
   # ActiveRecord callback methods
   before_destroy :ensure_not_referenced_by_any_line_item
-  
+
   def self.lastest
     Product.order(:updated_at).last
   end
